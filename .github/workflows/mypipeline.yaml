@@ -20,62 +20,65 @@ jobs:
       - name: Send GitHub Action trigger data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_MESSAGE: |
+        with:
+          playload: |
             {
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "DipSA 56 CI/CD Submission",
-                    "emoji": true
-                  }
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Name:* TANG YUYUAN"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Email:* e1112927@u.nus.edu"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Matriculation:* e1112927"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Repository:* https://github.com/byewall/CICD_Workshop"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "https://succinct-play-dipsa-cicd-workshop.up.railway.app/"
-                  },
-                  "accessory": {
-                    "type": "button",
+                "blocks": [
+                  {
+                    "type": "header",
                     "text": {
                       "type": "plain_text",
-                      "text": "Go",
+                      "text": "DipSA 56 CI/CD Submission",
                       "emoji": true
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "fields": [
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Name:* TANG YUYUAN"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Email:* e1112927@u.nus.edu"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "fields": [
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Matriculation:* e1112927"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Repository:* https://github.com/byewall/CICD_Workshop"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "https://succinct-play-dipsa-cicd-workshop.up.railway.app/"
                     },
-                    "value": "click_me_123",
-                    "url": "https://succinct-play-dipsa-cicd-workshop.up.railway.app/",
-                    "action_id": "button-action"
+                    "accessory": {
+                      "type": "button",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "Go",
+                        "emoji": true
+                      },
+                      "value": "click_me_123",
+                      "url": "https://succinct-play-dipsa-cicd-workshop.up.railway.app/",
+                      "action_id": "button-action"
+                    }
                   }
-                }
-              ]
-            }
+                ]
+              }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: 
+            
