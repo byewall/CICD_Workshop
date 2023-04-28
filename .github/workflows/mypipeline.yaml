@@ -10,9 +10,14 @@ jobs:
     steps:
       - name: checkout source
         uses: actions/checkout@v3
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.16.1'
+        run: go run hello.go
       
       - name: deploy railway
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{ secrets.RAILWAY_TOKEN }}
           service: "succinct-play"
+
