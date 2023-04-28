@@ -15,4 +15,4 @@ jobs:
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{ secrets.RAILWAY_TOKEN }}
-          service: "DipSA CICD Workshop"
+          service: "DipSA-CICD-Workshop"
