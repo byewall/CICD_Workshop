@@ -37,11 +37,11 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Name:* TANG YUYUAN"
+                        "text": "*Name:* ${{ secrets.NAME }}"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Email:* e1112927@u.nus.edu"
+                        "text": "*Email:* ${{ secrets.EMAIL }}"
                       }
                     ]
                   },
@@ -50,11 +50,11 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Matriculation:* e1112927"
+                        "text": "*Matriculation:* ${{ secrets.MATRICULATION }}"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Repository:* https://github.com/byewall/CICD_Workshop"
+                        "text": "*Repository:* ${{ secrets.REPOSITORY }}"
                       }
                     ]
                   },
@@ -62,7 +62,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "https://succinct-play-dipsa-cicd-workshop.up.railway.app/"
+                      "text": "${{ secrets.RAILWAY_URL }}"
                     },
                     "accessory": {
                       "type": "button",
@@ -72,7 +72,7 @@ jobs:
                         "emoji": true
                       },
                       "value": "click_me_123",
-                      "url": "https://succinct-play-dipsa-cicd-workshop.up.railway.app/",
+                      "url": "${{ secrets.RAILWAY_URL }}",
                       "action_id": "button-action"
                     }
                   }
