@@ -1,4 +1,4 @@
-name: building bear web application
+name: building bears web application
 on:
   push:
     branches:
