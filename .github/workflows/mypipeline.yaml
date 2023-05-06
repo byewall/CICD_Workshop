@@ -1,6 +1,8 @@
 name: building bear web application
 on:
   push:
+    branches:
+      - 'release/v1.0'
 
 jobs:
 
