@@ -2,7 +2,7 @@ name: building bear web application
 on:
   push:
     branches:
-      - 'release/v1.0'
+      - 'release/v[0-9]+.[0-9]+'
 
 jobs:
 
